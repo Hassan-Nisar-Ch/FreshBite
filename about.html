@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
+    <title>About FreshBite</title>
+
+    <!-- Font Awesome CDN link for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Section Starts -->
+    <header>
+      <!-- Primary Header with Logo and Search Box -->
+      <div class="header-1">
+        <!-- Logo with branding name -->
+        <a href="home.html" class="logo">
+          <i class="fas fa-leaf"></i>Fresh<span
+            style="font-weight: bold; color: #27ae60"
+            >Bite</span
+          >
+        </a>
+
+        <!-- Search Box for searching content -->
+        <form action="" class="search-box-container">
+          <input type="search" id="search-box" placeholder="Search here..." />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+      </div>
+
+      <!-- Secondary Header with Navigation Bar and Icon -->
+      <div class="header-2">
+        <!-- Menu Icon for Mobile View -->
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <!-- Navigation Links -->
+        <nav class="navbar">
+          <a href="home.html">home</a>
+          <a href="fruits.html">fruits</a>
+          <a href="vegetables.html">vegetables</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contact.html">contact us</a>
+          <a href="feedback.html">feedback</a>
+          <a href="about.html">about us</a>
+        </nav>
+
+        <!-- Cart Icon with Badge -->
+        <div class="icon">
+          <a href="#" class="fas fa-shopping-cart">
+            <span class="cart-badge"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!--about section starts-->
+
+    <section class="about-us">
+      <div class="content">
+        <div class="image">
+          <img src="images/about.jpg" alt="About Us Image" />
+        </div>
+        <div class="text">
+          <h2>About Us</h2>
+          <p>
+            Welcome to <span>FreshBite</span>! We are passionate about
+            delivering the <span>freshest, highest-quality</span> fruits and
+            vegetables to your table. Our mission is to support a healthy
+            lifestyle by offering a wide variety of
+            <span>locally-sourced and organic produce</span> from trusted
+            farmers and suppliers. From seasonal favorites to exotic choices, we
+            ensure quality and freshness in every bite.
+          </p>
+          <p>
+            Join us on our journey to a healthier, greener future—one delicious
+            bite at a time!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--about section ends-->
+
+    <!-- Footer Section Starts -->
+    <section class="footer">
+      <div class="box-container">
+        <!-- Company Information Section -->
+        <div class="box">
+          <!-- Logo and Company Description -->
+          <a href="home.html" class="logo">
+            <i class="fas fa-leaf"></i>Fresh<span
+              style="font-weight: bold; color: #27ae60"
+              >Bite</span
+            >
+          </a>
+          <p>
+            FreshBite brings you fresh, quality produce straight to your table.
+          </p>
+
+          <!-- Social Media Links -->
+          <div class="share">
+            <a href="#" class="btn fab fa-facebook-f" aria-label="Facebook"></a>
+            <a href="#" class="btn fab fa-twitter" aria-label="Twitter"></a>
+            <a href="#" class="btn fab fa-instagram" aria-label="Instagram"></a>
+            <a href="#" class="btn fab fa-linkedin" aria-label="LinkedIn"></a>
+          </div>
+        </div>
+
+        <!-- Location Links Section -->
+        <div class="box">
+          <h3>our location</h3>
+          <div class="links">
+            <a href="#"><i class="fas fa-globe"></i> Pakistan</a>
+            <a href="#"><i class="fas fa-globe"></i> India</a>
+            <a href="#"><i class="fas fa-globe"></i> USA</a>
+            <a href="#"><i class="fas fa-globe"></i> Turkey</a>
+            <a href="#"><i class="fas fa-globe"></i> Iran</a>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="box">
+          <h3>quick links</h3>
+          <div class="links">
+            <a href="home.html"><i class="fas fa-home"></i> home</a>
+            <a href="fruits.html"><i class="fas fa-lemon"></i> fruits</a>
+            <a href="vegetables.html"
+              ><i class="fas fa-carrot"></i> vegetables</a
+            >
+            <a href="about.html"><i class="fas fa-info-circle"></i> about us</a>
+            <a href="contact.html"
+              ><i class="fas fa-envelope"></i> contact us</a
+            >
+          </div>
+        </div>
+
+        <!-- Download App Links Section -->
+        <div class="box">
+          <h3>download app</h3>
+          <div class="links">
+            <a href="#"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#"><i class="fab fa-app-store"></i> App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Credit Section -->
+      <h1 class="credit">
+        Crafted with ❤️ by <span>HNC</span> | All rights reserved &copy;
+        <span id="year"></span>
+      </h1>
+    </section>
+    <!-- Footer Section Ends -->
+
+    <!-- Custom JavaScript Section -->
+    <script>
+      // Dynamically update the footer year
+      document.addEventListener("DOMContentLoaded", function () {
+        let yearElement = document.getElementById("year");
+
+        // Check if the year element exists, then update it with the current year
+        if (yearElement) {
+          yearElement.innerText = new Date().getFullYear();
+        }
+      });
+    </script>
+
+    <!-- External JavaScript file link for custom scripts -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

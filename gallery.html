@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
+    <title>FreshBite Gallery</title>
+
+    <!-- Font Awesome CDN link for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Gallery styles */
+      .gallery-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .gallery .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .gallery .row img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: contain;
+        transition: transform 0.3s;
+      }
+
+      .gallery .row img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Modal styling */
+      .modal {
+        display: none; /* Hide modal initially */
+        position: fixed; /* Fix modal to the viewport */
+        top: 0;
+        left: 0;
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+        justify-content: center;
+        align-items: center;
+        z-index: 10000; /* High z-index to stay above all other content */
+        overflow: hidden; /* Prevent inner content scrolling */
+      }
+
+      /* Modal content styling */
+      .modal-content {
+        max-width: 80%; /* Control max size of image */
+        max-height: 80%; /* Keep image within viewport */
+        border-radius: 8px; /* Rounded corners */
+      }
+
+      /* Close button styling */
+      .close {
+        position: fixed; /* Keep it fixed in the viewport */
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 10001; /* Higher than the modal content to ensure visibility */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Slight background for visibility */
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      @media (min-width: 600px) {
+        .gallery .row img {
+          width: calc(33.333% - 10px);
+        }
+      }
+
+      @media (max-width: 599px) {
+        .gallery .row img {
+          width: calc(50% - 10px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section Starts -->
+    <header>
+      <!-- Primary Header with Logo and Search Box -->
+      <div class="header-1">
+        <!-- Logo with branding name -->
+        <a href="home.html" class="logo">
+          <i class="fas fa-leaf"></i>Fresh<span
+            style="font-weight: bold; color: #27ae60"
+            >Bite</span
+          >
+        </a>
+
+        <!-- Search Box for searching content -->
+        <form action="" class="search-box-container">
+          <input type="search" id="search-box" placeholder="Search here..." />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+      </div>
+
+      <!-- Secondary Header with Navigation Bar and Icon -->
+      <div class="header-2">
+        <!-- Menu Icon for Mobile View -->
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <!-- Navigation Links -->
+        <nav class="navbar">
+          <a href="home.html">home</a>
+          <a href="fruits.html">fruits</a>
+          <a href="vegetables.html">vegetables</a>
+          <a href="gallery.html">gallery</a>
+          <a href="contact.html">contact us</a>
+          <a href="feedback.html">feedback</a>
+          <a href="about.html">about us</a>
+        </nav>
+
+        <!-- Cart Icon with Badge -->
+        <div class="icon">
+          <a href="#" class="fas fa-shopping-cart">
+            <span class="cart-badge"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!--gallery section starts-->
+
+    <section class="gallery-container" id="gallery-container">
+      <div class="content">
+        <h1 class="heading">FreshBite <span>Gallery</span></h1>
+      </div>
+      <div class="gallery">
+        <div class="row">
+          <img src="images/fruit-5.jpg" alt="" />
+          <img src="images/vegetable-1.jpg" alt="" />
+          <img src="images/vegetable-2.jpg" alt="" />
+        </div>
+        <div class="row">
+          <img src="images/fruit-2.jpeg" alt="" />
+          <img src="images/fruit-3.jpg" alt="" />
+          <img src="images/fruit-1.jpeg" alt="" />
+        </div>
+
+        <div class="row">
+          <img src="images/fruit-7.jpeg" alt="" />
+          <img src="images/fruit-6.jpg" alt="" />
+          <img src="images/vegetable-5.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!--gallery section ends-->
+    <!-- Footer Section Starts -->
+    <section class="footer">
+      <div class="box-container">
+        <!-- Company Information Section -->
+        <div class="box">
+          <!-- Logo and Company Description -->
+          <a href="home.html" class="logo">
+            <i class="fas fa-leaf"></i>Fresh<span
+              style="font-weight: bold; color: #27ae60"
+              >Bite</span
+            >
+          </a>
+          <p>
+            FreshBite brings you fresh, quality produce straight to your table.
+          </p>
+
+          <!-- Social Media Links -->
+          <div class="share">
+            <a href="#" class="btn fab fa-facebook-f" aria-label="Facebook"></a>
+            <a href="#" class="btn fab fa-twitter" aria-label="Twitter"></a>
+            <a href="#" class="btn fab fa-instagram" aria-label="Instagram"></a>
+            <a href="#" class="btn fab fa-linkedin" aria-label="LinkedIn"></a>
+          </div>
+        </div>
+
+        <!-- Location Links Section -->
+        <div class="box">
+          <h3>our location</h3>
+          <div class="links">
+            <a href="#"><i class="fas fa-globe"></i> Pakistan</a>
+            <a href="#"><i class="fas fa-globe"></i> India</a>
+            <a href="#"><i class="fas fa-globe"></i> USA</a>
+            <a href="#"><i class="fas fa-globe"></i> Turkey</a>
+            <a href="#"><i class="fas fa-globe"></i> Iran</a>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="box">
+          <h3>quick links</h3>
+          <div class="links">
+            <a href="home.html"><i class="fas fa-home"></i> home</a>
+            <a href="fruits.html"><i class="fas fa-lemon"></i> fruits</a>
+            <a href="vegetables.html"
+              ><i class="fas fa-carrot"></i> vegetables</a
+            >
+            <a href="about.html"><i class="fas fa-info-circle"></i> about us</a>
+            <a href="contact.html"
+              ><i class="fas fa-envelope"></i> contact us</a
+            >
+          </div>
+        </div>
+
+        <!-- Download App Links Section -->
+        <div class="box">
+          <h3>download app</h3>
+          <div class="links">
+            <a href="#"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#"><i class="fab fa-app-store"></i> App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Credit Section -->
+      <h1 class="credit">
+        Crafted with ❤️ by <span>HNC</span> | All rights reserved &copy;
+        <span id="year"></span>
+      </h1>
+    </section>
+    <!-- Footer Section Ends -->
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" style="display: none" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+      <!-- Close Button for Modal -->
+      <span class="close" id="closeModal">&times;</span>
+
+      <!-- Image to be displayed inside the modal -->
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <!-- Custom JavaScript Section -->
+    <script>
+      // Dynamically update the footer year
+      document.addEventListener("DOMContentLoaded", function () {
+        let yearElement = document.getElementById("year");
+
+        // Check if the year element exists, then update it with the current year
+        if (yearElement) {
+          yearElement.innerText = new Date().getFullYear();
+        }
+      });
+    </script>
+
+    <!-- External JavaScript file link for custom scripts -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
