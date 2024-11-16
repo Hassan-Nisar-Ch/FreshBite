@@ -16,7 +16,10 @@ A responsive website designed using HTML, CSS, and JavaScript, featuring an inte
 
 ## How to Use
 
-1. Clone this repository: `git clone <https://github.com/Hassan-Nisar-Ch/FreshBite.git>`
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Hassan-Nisar-Ch/FreshBite.git
+   ```
 2. Navigate to the project folder.
 3. Open `home.html` in a browser.
 
