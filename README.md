@@ -14,6 +14,22 @@ A responsive website designed using HTML, CSS, and JavaScript, featuring an inte
 - CSS
 - JavaScript
 
+## Screenshots
+
+Here are some screenshots of the website:
+
+### Homepage
+
+![Homepage](screenshots/home.jpeg)
+
+### About Page
+
+![About Page](screenshots/about.jpeg)
+
+### Contact Page
+
+![Contact Page](screenshots/contact.jpeg)
+
 ## How to Use
 
 1. Clone this repository:
